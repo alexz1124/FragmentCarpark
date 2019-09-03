@@ -2,16 +2,94 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@drawable/bg">
 
-        <Button
-            android:id="@+id/button3"
+        <TextView
+            android:id="@+id/status_1"
+            style="@style/status"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/roboto"
+            android:textAlignment="center"
+            app:layout_constraintBottom_toTopOf="@+id/btnDelete"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/status_2"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.120000005" />
+
+        <TextView
+            android:id="@+id/status_2"
+            style="@style/status"
+            android:fontFamily="@font/roboto"
+            app:layout_constraintBottom_toBottomOf="@+id/status_1"
+            app:layout_constraintEnd_toStartOf="@+id/status-3"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/status_1"
+            app:layout_constraintTop_toTopOf="@+id/status_1" />
+
+        <TextView
+            android:id="@+id/status-3"
+            style="@style/status"
+            android:fontFamily="@font/roboto"
+            app:layout_constraintBottom_toBottomOf="@+id/status_2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/status_2"
+            app:layout_constraintTop_toTopOf="@+id/status_2" />
+
+        <EditText
+            android:id="@+id/editlPlate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Button"
+            android:ems="10"
+            android:fontFamily="@font/roboto"
+            android:hint="License Plate"
+            android:inputType="textPersonName"
+            app:layout_constraintBottom_toTopOf="@+id/editBrand"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/status_1"
+            app:layout_constraintVertical_bias="0.19999999" />
+
+        <EditText
+            android:id="@+id/editName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:fontFamily="@font/roboto"
+            android:hint="Name"
+            android:inputType="textPersonName"
+            app:layout_constraintBottom_toTopOf="@+id/btnDelete"
+            app:layout_constraintEnd_toEndOf="@+id/editBrand"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/editBrand"
+            app:layout_constraintTop_toBottomOf="@+id/editBrand" />
+
+        <EditText
+            android:id="@+id/editBrand"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:fontFamily="@font/roboto"
+            android:hint="Brand"
+            android:inputType="textPersonName"
+            app:layout_constraintBottom_toTopOf="@+id/editName"
+            app:layout_constraintEnd_toEndOf="@+id/editlPlate"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/editlPlate"
+            app:layout_constraintTop_toBottomOf="@+id/editlPlate" />
+
+        <Button
+            android:id="@+id/btnDelete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto"
+            android:text="@string/btnDelete"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.284"
@@ -20,13 +98,16 @@
             app:layout_constraintVertical_bias="0.84" />
 
         <Button
-            android:id="@+id/button4"
+            android:id="@+id/bntEdit"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Button"
-            app:layout_constraintBottom_toBottomOf="@+id/button3"
+            android:fontFamily="@font/roboto"
+            android:text="@string/btnEdit"
+            app:layout_constraintBottom_toBottomOf="@+id/btnDelete"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/button3"
-            app:layout_constraintTop_toTopOf="@+id/button3" />
+            app:layout_constraintHorizontal_bias="0.503"
+            app:layout_constraintStart_toEndOf="@+id/btnDelete"
+            app:layout_constraintTop_toTopOf="@+id/btnDelete"
+            app:layout_constraintVertical_bias="0.0" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

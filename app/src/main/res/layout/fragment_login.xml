@@ -12,12 +12,13 @@
             android:id="@+id/button2"
             android:layout_width="@dimen/box_text_login_w"
             android:layout_height="@dimen/box_text_login"
-            android:layout_marginBottom="100dp"
+            android:layout_marginBottom="92dp"
             android:text="Button"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@+id/imageView3"
-            app:layout_constraintHorizontal_bias="0.678"
-            app:layout_constraintStart_toStartOf="@+id/imageView3" />
+            app:layout_constraintHorizontal_bias="0.517"
+            app:layout_constraintStart_toStartOf="@+id/imageView3"
+            app:layout_constraintTop_toBottomOf="@+id/user_text2" />
 
         <EditText
             android:id="@+id/user_text2"
