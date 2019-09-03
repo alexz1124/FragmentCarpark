@@ -21,7 +21,7 @@ class InfoFragment : Fragment() {
     ): View? {
         val binding = DataBindingUtil.inflate<FragmentInfoBinding>(
             inflater,
-            R.layout.fragment_login, container, false
+            R.layout.fragment_info, container, false
         )
         return binding.root
     }

@@ -21,7 +21,7 @@ class CarparkFragment : Fragment() {
     ): View? {
         val binding = DataBindingUtil.inflate<FragmentCarparkBinding>(
             inflater,
-            R.layout.fragment_login, container, false
+            R.layout.fragment_carpark, container, false
         )
         return binding.root
     }
