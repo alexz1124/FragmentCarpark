@@ -24,6 +24,6 @@
     <fragment
         android:id="@+id/infoFragment"
         android:name="buu.informatics.s59160129.loginandparking.InfoFragment"
-        android:label="InfoFragment"
-        tools:layout="@layout/fragment_info"/>
+        android:label="fragment_info"
+        tools:layout="@layout/fragment_info" />
 </navigation>
