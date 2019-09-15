@@ -3,88 +3,92 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="buu.informatics.s59160129.loginandparking.CarparkFragment">
-
+    <data>
+        <variable
+            name="myCar"
+            type="buu.informatics.s59160129.loginandparking.MyCar" />
+    </data>
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@drawable/bg">
 
         <TextView
-            android:id="@+id/status_1"
+            android:id="@+id/status_one"
             style="@style/status"
             android:fontFamily="@font/roboto"
             android:textAlignment="center"
-            app:layout_constraintBottom_toTopOf="@+id/btnDelete"
-            app:layout_constraintEnd_toStartOf="@+id/status_2"
+            app:layout_constraintBottom_toTopOf="@+id/btnDel"
+            app:layout_constraintEnd_toStartOf="@+id/status_two"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.110000014" />
 
         <TextView
-            android:id="@+id/status_2"
+            android:id="@+id/status_two"
             style="@style/status"
             android:fontFamily="@font/roboto"
-            app:layout_constraintBottom_toBottomOf="@+id/status_1"
-            app:layout_constraintEnd_toStartOf="@+id/status_3"
+            app:layout_constraintBottom_toBottomOf="@+id/status_one"
+            app:layout_constraintEnd_toStartOf="@+id/status_three"
             app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/status_1"
-            app:layout_constraintTop_toTopOf="@+id/status_1" />
+            app:layout_constraintStart_toEndOf="@+id/status_one"
+            app:layout_constraintTop_toTopOf="@+id/status_one" />
 
         <TextView
-            android:id="@+id/status_3"
+            android:id="@+id/status_three"
             style="@style/status"
             android:fontFamily="@font/roboto"
-            app:layout_constraintBottom_toBottomOf="@+id/status_2"
+            app:layout_constraintBottom_toBottomOf="@+id/status_two"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/status_2"
-            app:layout_constraintTop_toTopOf="@+id/status_2" />
+            app:layout_constraintStart_toEndOf="@+id/status_two"
+            app:layout_constraintTop_toTopOf="@+id/status_two" />
 
         <EditText
-            android:id="@+id/editlPlate"
+            android:id="@+id/text1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="10"
             android:fontFamily="@font/roboto"
             android:hint="License Plate"
             android:inputType="textPersonName"
-            app:layout_constraintBottom_toTopOf="@+id/editBrand"
+            app:layout_constraintBottom_toTopOf="@+id/text2"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/status_1"
+            app:layout_constraintTop_toBottomOf="@+id/status_one"
             app:layout_constraintVertical_bias="0.19999999" />
 
         <EditText
-            android:id="@+id/editName"
+            android:id="@+id/text3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="10"
             android:fontFamily="@font/roboto"
             android:hint="Name"
             android:inputType="textPersonName"
-            app:layout_constraintBottom_toTopOf="@+id/btnDelete"
-            app:layout_constraintEnd_toEndOf="@+id/editBrand"
+            app:layout_constraintBottom_toTopOf="@+id/btnDel"
+            app:layout_constraintEnd_toEndOf="@+id/text2"
             app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="@+id/editBrand"
-            app:layout_constraintTop_toBottomOf="@+id/editBrand" />
+            app:layout_constraintStart_toStartOf="@+id/text2"
+            app:layout_constraintTop_toBottomOf="@+id/text2" />
 
         <EditText
-            android:id="@+id/editBrand"
+            android:id="@+id/text2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="10"
             android:fontFamily="@font/roboto"
             android:hint="Brand"
             android:inputType="textPersonName"
-            app:layout_constraintBottom_toTopOf="@+id/editName"
-            app:layout_constraintEnd_toEndOf="@+id/editlPlate"
+            app:layout_constraintBottom_toTopOf="@+id/text3"
+            app:layout_constraintEnd_toEndOf="@+id/text1"
             app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="@+id/editlPlate"
-            app:layout_constraintTop_toBottomOf="@+id/editlPlate" />
+            app:layout_constraintStart_toStartOf="@+id/text1"
+            app:layout_constraintTop_toBottomOf="@+id/text1" />
 
         <Button
-            android:id="@+id/btnDelete"
+            android:id="@+id/btnDel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/roboto"
@@ -97,16 +101,16 @@
             app:layout_constraintVertical_bias="0.84" />
 
         <Button
-            android:id="@+id/bntEdit"
+            android:id="@+id/btnEdit"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/roboto"
             android:text="@string/btnEdit"
-            app:layout_constraintBottom_toBottomOf="@+id/btnDelete"
+            app:layout_constraintBottom_toBottomOf="@+id/btnDel"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.503"
-            app:layout_constraintStart_toEndOf="@+id/btnDelete"
-            app:layout_constraintTop_toTopOf="@+id/btnDelete"
+            app:layout_constraintStart_toEndOf="@+id/btnDel"
+            app:layout_constraintTop_toTopOf="@+id/btnDel"
             app:layout_constraintVertical_bias="0.0" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
